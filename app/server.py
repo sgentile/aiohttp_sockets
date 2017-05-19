@@ -26,7 +26,7 @@ async def websocket_handler(request):
     async for msg in ws:
         print(msg.type)
         print(msg.data)
-        ws.send_str(msg.data + '/answer')
+        ws.send_str(msg.data + '/answer');
         # if msg.type == WSMsgType.TEXT:
         #     if msg.data == 'close':
         #         await ws.close()
